@@ -11,7 +11,7 @@ This image is used to compile QMK ergodox C files.
 Run the following command:
 
 ``` 
-    docker run -it -v /PATH_TO_KEYMAP.c_FILE:/keymaps docker-test 
+    docker run -it -v /PATH_TO_KEYMAP.c_FILE:/keymaps elaurendeau/ergodox_compiler 
 ```
 
 Within the container, you can use the following commands:
@@ -19,3 +19,7 @@ Within the container, you can use the following commands:
 * copy (copy your keymap.c to the qmk directory)
 * run (compile your keymap.c into the hex file)
 * get (bring the keymap.hex into the keymap directory)
+
+## Docker hub repository ##
+
+A [link](https://hub.docker.com/r/elaurendeau/ergodox_compiler "here").
