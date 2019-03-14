@@ -1,20 +1,21 @@
-# Docker image: Ergodox_Compiler
+# Docker Image: Ergodox_Compiler #
 
-This image is used to compile ergodox C files.
+This image is used to compile QMK ergodox C files.
 
-## Requirements
+## Requirement ##
+* docker
+* File named keymap.c
 
-- Docker
-- File named keymap.c
+## Usage ##
 
-## Usage
+Run the following command:
 
-Locate the folder of your keymap.c file
-
-Run following command: 
-
-```
-	docker run --rm -v /PATH_TO_keymap.c_FILE:/keymap elaurendeau/ergodox_compiler
+``` 
+    docker run -it -v /PATH_TO_KEYMAP.c_FILE:/keymaps docker-test 
 ```
 
-When the run is completed, you can retrieve the keymap.hex file located in the keymap.c directory.
+Within the container, you can use the following commands:
+* full (does everything)
+* copy (copy your keymap.c to the qmk directory)
+* run (compile your keymap.c into the hex file)
+* get (bring the keymap.hex into the keymap directory)
